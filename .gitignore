@@ -1,0 +1,6 @@
+# vpn files
+ovpn/
+!ovpn/.gitkeep
+
+#nix
+.direnv
