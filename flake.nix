@@ -88,11 +88,16 @@
     in {
       devShells.default = pkgs.mkShell rec {
         packages = with pkgs; [
+          amass
+          awscli
           burpsuite
           dirb
+          dnsrecon
           evil-winrm
+          ffuf
           gobuster
           inetutils
+          knockpy
           john
           mariadb
           metasploit
@@ -104,7 +109,9 @@
           redis
           samba
           sqlmap
+          subfinder
           #wordlists  # currently broken, use `nix shell nixpkgs#wordlists` instead
+          #wfuzz  # currently broken, use `nix shell nixpkgs#wfuzz` instead
           wireshark
 
           # patched packages
