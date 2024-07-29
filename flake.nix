@@ -94,6 +94,7 @@
           gobuster
           inetutils
           john
+          mariadb
           metasploit
           netcat
           nftables
