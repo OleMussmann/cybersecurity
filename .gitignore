@@ -4,3 +4,6 @@ ovpn/*
 
 #nix
 .direnv
+
+workdir
+!workdir/.gitkeep
