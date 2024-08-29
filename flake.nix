@@ -38,6 +38,7 @@
           evil-winrm
           exploitdb
           ffuf
+          freerdp3
           gobuster
           inetutils
           knockpy
