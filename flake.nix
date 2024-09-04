@@ -44,7 +44,7 @@
           john
           mariadb
           metasploit
-          netcat
+          netcat-gnu
           nftables
           ngrep
           nikto
@@ -56,6 +56,7 @@
           samba
           sqlmap
           subfinder
+          termshark
           wordlists
           wfuzz
           wireshark
