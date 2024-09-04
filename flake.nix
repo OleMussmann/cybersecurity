@@ -54,6 +54,7 @@
           redis
           responder
           samba
+          socat
           sqlmap
           subfinder
           termshark
