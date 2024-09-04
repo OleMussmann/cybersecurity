@@ -1,5 +1,5 @@
 # vpn files
-ovpn/
+ovpn/*
 !ovpn/.gitkeep
 
 #nix
