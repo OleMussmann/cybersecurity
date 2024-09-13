@@ -54,6 +54,7 @@
           redis
           responder
           samba
+          seclists
           socat
           sqlmap
           subfinder
