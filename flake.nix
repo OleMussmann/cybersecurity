@@ -59,6 +59,7 @@
           sqlmap
           subfinder
           termshark
+          whatweb
           wordlists
           wfuzz
           wireshark
