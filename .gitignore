@@ -2,8 +2,12 @@
 ovpn/*
 !ovpn/.gitkeep
 
-#nix
+# nix
 .direnv
+
+# VM things
+nixos.qcow2
+result
 
 workdir
 !workdir/.gitkeep
