@@ -10,13 +10,13 @@ Allow the flake to open an environment with `direnv allow`.
   metasploit         you        msf_user
   ```
 - Create user:
-  `sudo -u postgres createuser msf_user -P`  
+  `sudo -u postgres createuser msf_user -P`
 - Create database:
-  `sudo -u postgres createdb --owner=msf_user msf_database`  
+  `sudo -u postgres createdb --owner=msf_user msf_database`
 - Connect metasploit to db
-  `db_connect msf_user:SUPERSECRETPASSWORD@127.0.0.1:5432/msf_database`  
+  `db_connect msf_user:SUPERSECRETPASSWORD@127.0.0.1:5432/msf_database`
 - Test connection
-  `db_status`  
+  `db_status`
   -> `Connected to msf_database. Connection type: postgresql. Connection name: local_db_service.`
 
 ### Usage Tip
@@ -25,4 +25,5 @@ Make sure to set the `LHOST` IP to `tun0`, or the IP that was assigned with the 
 ## Open Ports
 
 - Temporarily open firewall `nixos-firewall-tool open tcp 4444`
+- Check firewall `nixos-firewall-tool show`
 - Reset firewall `nixos-firewall-tool reset`
