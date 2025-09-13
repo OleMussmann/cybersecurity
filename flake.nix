@@ -1,10 +1,10 @@
 {
   description = "cybersecurity";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
 
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -29,9 +29,11 @@
         ffuf
         freerdp3
         gobuster
-        inetutils
+        hash-identifier
+        inetutils  # telnet etc.
         knockpy
         john
+        libgcrypt
         mariadb
         metasploit
         netcat-gnu
@@ -39,18 +41,22 @@
         ngrep
         nikto
         nmap
+        openssl
         openvpn
         postgresql  # for metasploit
         redis
+        remmina
         responder
         samba
         seclists
         socat
         sqlmap
         subfinder
+        tshark
         termshark
         unixtools.xxd
         whatweb
+        whois
         wordlists
         wfuzz
         wireshark
