@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-mount --bind ./hosts /etc/hosts
+mount -o ro --bind ./hosts /etc/hosts
 echo "Temporary /etc/hosts in place."
 echo
 echo "Press any key to restore /etc/hosts ..."
