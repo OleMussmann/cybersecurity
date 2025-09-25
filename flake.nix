@@ -18,18 +18,23 @@
 
       user = "alice";
 
+      pyPkgs = pkgs.python312Packages;
+
       myPackages = with pkgs; [
         amass
         awscli
         burpsuite
+        cyberchef
         dirb
         dnsrecon
         evil-winrm
+        exiftool
         exploitdb
         ffuf
         freerdp3
         gobuster
         hash-identifier
+        hashcat
         inetutils  # telnet etc.
         knockpy
         john
@@ -43,15 +48,18 @@
         nmap
         openssl
         openvpn
+        poppler-utils  # for pdfinfo
         postgresql  # for metasploit
         redis
         remmina
         responder
         samba
         seclists
+        snort
         socat
         sqlmap
         subfinder
+        thc-hydra
         tshark
         termshark
         unixtools.xxd
@@ -60,6 +68,12 @@
         wordlists
         wfuzz
         wireshark
+      ];
+
+      pyPackages = with pyPkgs; [
+        pycryptodome
+        requests
+        sympy
       ];
 
       # Ugly hack for evil-winrm, see https://github.com/NixOS/nixpkgs/issues/255276
@@ -81,7 +95,7 @@
       '';
     in {
       devShells.default = pkgs.mkShell rec {
-        packages = myPackages;
+        packages = myPackages ++ pyPackages;
 
         # Ugly hack for evil-winrm, see https://github.com/NixOS/nixpkgs/issues/255276
         OPENSSL_CONF="${openssl_conf}";
@@ -120,7 +134,7 @@
             users.users.${user} = {
               isNormalUser = true;
               password = "${user}";
-              packages = myPackages;
+              packages = myPackages ++ pyPackages;
             };
 
             virtualisation.vmVariant = {
