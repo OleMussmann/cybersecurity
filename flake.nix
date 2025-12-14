@@ -22,8 +22,10 @@
 
       myPackages = with pkgs; [
         amass
+        arp-scan
         awscli
         burpsuite
+        crunch  # generate word lists
         cyberchef
         dirb
         dnsrecon
@@ -35,11 +37,14 @@
         gobuster
         hash-identifier
         hashcat
+        hextazy
         inetutils  # telnet etc.
         knockpy
         john
+        jython  # for burp suite plugins
         libgcrypt
         mariadb
+        masscan
         metasploit
         netcat-gnu
         nftables
@@ -53,6 +58,8 @@
         redis
         remmina
         responder
+        rlwrap
+        ruby
         samba
         seclists
         snort
@@ -60,17 +67,21 @@
         sqlmap
         subfinder
         thc-hydra
+        theharvester  # OSINT
         tshark
         termshark
         unixtools.xxd
+        waybackurls
         whatweb
         whois
         wordlists
         wfuzz
         wireshark
+        yara
       ];
 
       pyPackages = with pyPkgs; [
+        impacket
         pycryptodome
         requests
         sympy
